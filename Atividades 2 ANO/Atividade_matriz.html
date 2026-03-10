@@ -1,0 +1,79 @@
+#0= 2 ou 3 ano
+#1= deficiencia
+#2= faz esporte
+#3= Qual esporte
+import time
+
+Alunos=[
+    [1,0,1,1],#julio
+    [0,0,1,1],#Pedro
+    [1,1,0,0],#Marcos
+    [0,0,0,1],#Ana
+    [1,1,1,0],#Moura
+    [1,0,0,1],#Joao
+    [0,0,0,0],#Gabriel
+    [0,0,1,0],#Lucas
+    [1,1,0,1],#renato
+    [0,0,0,0]#Maria
+]
+
+alunos=["julio", "Pedro", "Marcos", "Ana", "Moura", "Joao", "Gabriel", "Lucas", "Renato", "Maria"]
+
+def contar_alunos_série_2_defi_espo_arco(Alunos):
+    return sum(1 for a in Alunos if a[0]==0 and a[1]==1 and a[2]==1 and a[3]==0)
+
+def contar_alunos_série_2_defi_espo_fut(Alunos):
+    return sum(1 for a in Alunos if a[0]==0 and a[1]==1 and a[2]==1 and a[3]==1)
+
+def contar_alunos_série_3_defi_espo_arco(Alunos):
+    return sum(1 for a in Alunos if a[0]==1 and a[1]==1 and a[2]==1 and a[3]==0)
+
+def contar_alunos_série_3_defi_espo_fut(Alunos):
+    return sum(1 for a in Alunos if a[0]==0 and a[1]==1 and a[2]==1 and a[3]==1)
+
+def contar_alunos_série_2_espo_arco(Alunos):
+    return sum(1 for a in Alunos if a[0]==0 and a[1]==0 and a[2]==1 and a[3]==0)
+
+def contar_alunos_série_3_espo_arco(Alunos):
+    return sum(1 for a in Alunos if a[0]==1 and a[1]==0 and a[2]==1 and a[3]==0)
+
+def contar_alunos_série_2_espo_fut(Alunos):
+    return sum(1 for a in Alunos if a[0]==0 and a[1]==0 and a[2]==1 and a[3]==1)
+
+def contar_alunos_série_3_espo_fut(Alunos):
+    return sum(1 for a in Alunos if a[0]==1 and a[1]==0 and a[2]==1 and a[3]==1)
+
+def contar_alunos_série_2_defi(Alunos):
+    return sum(1 for a in Alunos if a[0]==0 and a[1]==1 and a[2]==0 )
+
+def contar_alunos_série_3_defi(Alunos):
+    return sum(1 for a in Alunos if a[0]==1 and a[1]==1 and a[2]==0 )
+
+def contar_alunos_série_2(Alunos):
+    return sum(1 for a in Alunos if a[0]==0 )
+
+def contar_alunos_série_3(Alunos):
+    return sum(1 for a in Alunos if a[0]==1 )
+
+aluno_2_def_espo_arco=contar_alunos_série_2_defi_espo_arco(Alunos)
+aluno_3_espo_fut=contar_alunos_série_3_espo_fut(Alunos)
+aluno_2_espo_arco=contar_alunos_série_2_espo_arco(Alunos)
+aluno_def_2=contar_alunos_série_2_defi(Alunos)
+aluno_def_3=contar_alunos_série_3_defi(Alunos)
+
+
+
+print("Olá, você está aqui para algumas informações sobre os alunos")
+time.sleep(1.5)
+print("Qual pergunta deseja fazer?")
+time.sleep(1.5)
+pergunta=int(input( "\n 1 - Quantos alunos  do 2 ano, deficientes praticam arco flecha"
+                    "\n 2 - Quantos alunos do 3 ano praticam futsal"
+                    "\n 3 - Quantos alunos do 2 ano, praticam arco flecha e não são deficiente"
+                    "\n 4 - Quantos alunos deficientes NÃO praticam nenhum esporte:   "))
+
+
+if pergunta=="1":
+    print("Total de alunos deficiêntes do segundo que fazem arco:{aluno_2_def_espo_arco}")
+
+

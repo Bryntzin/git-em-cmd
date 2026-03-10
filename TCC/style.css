@@ -1,0 +1,40 @@
+body{
+    text-align: center;
+ background-color : rgb(128, 144, 237);
+ color: black;
+ font-size: 20px;
+ font-style: italic;
+    
+ }
+
+center{
+    text-align: center;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+}
+
+button{
+color: wheat;
+background-color: rebeccapurple;
+width: 130px;
+height: 90px;
+position: fixed;right: 1000px;
+
+}
+
+h1{
+    font-size : 50px;
+    font-family: Georgia;
+    color: rgb(113, 36, 184);
+
+}
+
+h3{
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(20, 20, 82);
+}
